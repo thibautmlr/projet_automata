@@ -12,15 +12,19 @@ from automata.fa.nfa import NFA
 
 from .fa_mixins.language_operations import LanguageOperationsMixin
 from .fa_mixins.quotient_fa import QuotientMixin
-from automata_extensions.fa.fa_mixins.accessibility import AccessibilityMixin
-from automata_extensions.fa.fa_mixins.cycle import CycleMixin
-from automata_extensions.fa.fa_mixins.determinism import DeterminismMixin
-from automata_extensions.fa.fa_mixins.graph import GraphMixin
-from automata_extensions.fa.fa_mixins.reverse import ReverseMixin
-from automata_extensions.fa.fa_mixins.scc import SCCMixin
-from automata_extensions.fa.fa_mixins.subautomaton import SubautomatonMixin
-from automata_extensions.fa.fa_mixins.traversal import TraversalMixin
-from automata_extensions.fa.fa_mixins.word import WordMixin
+from .fa_mixins.accessibility import AccessibilityMixin
+from .fa_mixins.cycle import CycleMixin
+from .fa_mixins.determinism import DeterminismMixin
+from .fa_mixins.graph import GraphMixin
+from .fa_mixins.reverse import ReverseMixin
+from .fa_mixins.scc import SCCMixin
+from .fa_mixins.subautomaton import SubautomatonMixin
+from .fa_mixins.traversal import TraversalMixin
+from .fa_mixins.word import WordMixin
+from .fa_mixins.brzozowski import BrzozowskiMixin
+from .fa_mixins.regex import RegexMixin
+from .fa_mixins.regex_arden import ArdenMixin
+from .fa_mixins.regex_optimum import RegexOptimumMixin
 
 
 class ExtendedFA(
@@ -35,6 +39,10 @@ class ExtendedFA(
     ReverseMixin,
     LanguageOperationsMixin,
     QuotientMixin,
+    ArdenMixin,
+    BrzozowskiMixin,
+    RegexOptimumMixin,
+    RegexMixin,
     FA,
 ):
     """
