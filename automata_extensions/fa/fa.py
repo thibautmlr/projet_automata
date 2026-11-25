@@ -10,6 +10,8 @@ from automata.fa.fa import FA
 from automata.fa.gnfa import GNFA
 from automata.fa.nfa import NFA
 
+from .fa_mixins.language_operations import LanguageOperationsMixin
+from .fa_mixins.quotient_fa import QuotientMixin
 from automata_extensions.fa.fa_mixins.accessibility import AccessibilityMixin
 from automata_extensions.fa.fa_mixins.cycle import CycleMixin
 from automata_extensions.fa.fa_mixins.determinism import DeterminismMixin
@@ -31,6 +33,8 @@ class ExtendedFA(
     WordMixin,
     DeterminismMixin,
     ReverseMixin,
+    LanguageOperationsMixin,
+    QuotientMixin,
     FA,
 ):
     """

@@ -4,17 +4,18 @@ from __future__ import annotations
 
 from automata.fa.dfa import DFA
 
-from automata_extensions.fa.dfa_mixins.complement import ComplementMixin
-from automata_extensions.fa.dfa_mixins.completeness import CompletenessMixin
-from automata_extensions.fa.dfa_mixins.difference import DifferenceMixin
-from automata_extensions.fa.dfa_mixins.execution import ExecutionMixin
-from automata_extensions.fa.dfa_mixins.inclusion import InclusionMixin
-from automata_extensions.fa.dfa_mixins.isomorphism import IsomorphismMixin
-from automata_extensions.fa.dfa_mixins.minimization import MinimizationMixin
-from automata_extensions.fa.dfa_mixins.prefix import PrefixMixin
-from automata_extensions.fa.dfa_mixins.product import ProductMixin
-from automata_extensions.fa.dfa_mixins.union import UnionMixin
-from automata_extensions.fa.fa import ExtendedFA
+from .dfa_mixins.residual import ResidualMixin
+from .dfa_mixins.complement import ComplementMixin
+from .dfa_mixins.completeness import CompletenessMixin
+from .dfa_mixins.difference import DifferenceMixin
+from .dfa_mixins.execution import ExecutionMixin
+from .dfa_mixins.inclusion import InclusionMixin
+from .dfa_mixins.isomorphism import IsomorphismMixin
+from .dfa_mixins.minimization import MinimizationMixin
+from .dfa_mixins.prefix import PrefixMixin
+from .dfa_mixins.product import ProductMixin
+from .dfa_mixins.union import UnionMixin
+from .fa import ExtendedFA
 
 
 class ExtendedDFA(
@@ -28,6 +29,7 @@ class ExtendedDFA(
     MinimizationMixin,
     ExecutionMixin,
     PrefixMixin,
+    ResidualMixin,
     ExtendedFA,
     DFA,
 ):
