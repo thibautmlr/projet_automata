@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "automata_extensions"
+version = "0.1.0"
+description = "Extension pédagogique de automata-lib 9.2.0 pour la théorie des langages et des automates."
+requires-python = ">=3.10"
+dependencies = [
+    "automata-lib==9.2.0",
+    "graphviz>=0.20",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+]
+
+[tool.setuptools.packages.find]
+include = ["automata_extensions*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
