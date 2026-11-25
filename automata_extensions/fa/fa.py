@@ -21,6 +21,8 @@ from .fa_mixins.scc import SCCMixin
 from .fa_mixins.subautomaton import SubautomatonMixin
 from .fa_mixins.traversal import TraversalMixin
 from .fa_mixins.word import WordMixin
+from .fa_mixins.grammar_fa import GrammarMixin
+from .fa_mixins.morphism import MorphismMixin
 from .fa_mixins.brzozowski import BrzozowskiMixin
 from .fa_mixins.regex import RegexMixin
 from .fa_mixins.regex_arden import ArdenMixin
@@ -41,6 +43,8 @@ class ExtendedFA(
     QuotientMixin,
     ArdenMixin,
     BrzozowskiMixin,
+    GrammarMixin,
+    MorphismMixin,
     RegexOptimumMixin,
     RegexMixin,
     FA,
