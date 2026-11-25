@@ -21,6 +21,8 @@ from .fa_mixins.scc import SCCMixin
 from .fa_mixins.subautomaton import SubautomatonMixin
 from .fa_mixins.traversal import TraversalMixin
 from .fa_mixins.word import WordMixin
+from .fa_mixins.animation import AnimationMixin
+from .fa_mixins.visualization import VisualizationMixin
 from .fa_mixins.grammar_fa import GrammarMixin
 from .fa_mixins.morphism import MorphismMixin
 from .fa_mixins.brzozowski import BrzozowskiMixin
@@ -45,6 +47,8 @@ class ExtendedFA(
     BrzozowskiMixin,
     GrammarMixin,
     MorphismMixin,
+    AnimationMixin,
+    VisualizationMixin,
     RegexOptimumMixin,
     RegexMixin,
     FA,
