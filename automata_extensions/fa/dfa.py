@@ -14,6 +14,7 @@ from .dfa_mixins.isomorphism import IsomorphismMixin
 from .dfa_mixins.minimization import MinimizationMixin
 from .dfa_mixins.prefix import PrefixMixin
 from .dfa_mixins.product import ProductMixin
+from .dfa_mixins.minimization_extra import MinimizationExtraMixin
 from .dfa_mixins.syntactic_monoid import SyntacticMonoidMixin
 from .dfa_mixins.union import UnionMixin
 from .fa import ExtendedFA
@@ -28,6 +29,7 @@ class ExtendedDFA(
     UnionMixin,
     InclusionMixin,
     IsomorphismMixin,
+    MinimizationExtraMixin,
     MinimizationMixin,
     ExecutionMixin,
     PrefixMixin,
